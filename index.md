@@ -1,5 +1,10 @@
+---
+layout: default
+title: Sanchit - AI Engineer
+---
+
 <!-- Profile Header -->
-<h1 align="center">Hi, I’m Sanchit <span>👋</span></h1>
+<h1 align="center">Hi, I'm Sanchit <span>👋</span></h1>
 <p align="center">
   <b>AI Engineer @ Quinnox</b> • <b>NLP + ML Systems</b><br/>
 </p>
