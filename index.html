@@ -3,156 +3,471 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanchit - AI Engineer</title>
+    <title>Sanchit Verma | Portfolio</title>
+    <meta name="description" content="Sanchit Verma — AI Engineer building agentic systems, production LLMs, and high-performance data pipelines. Based in London, UK.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            color: #24292e;
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #ffffff;
+            color: #000000;
         }
-        h1, h2 { border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; }
-        h1 { text-align: center; }
-        .center { text-align: center; }
-        a { color: #0366d6; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        img { vertical-align: middle; margin: 2px; }
-        code { background-color: #f6f8fa; padding: 2px 6px; border-radius: 3px; }
-        hr { border: 0; height: 1px; background: #eaecef; margin: 20px 0; }
+        .mono {
+            font-family: 'Space Mono', monospace;
+        }
+        .brutalist-card {
+            border: 4px solid #000000;
+            box-shadow: 8px 8px 0px 0px #000000;
+            transition: all 0.2s ease;
+        }
+        .brutalist-card:hover {
+            transform: translate(4px, 4px);
+            box-shadow: 0px 0px 0px 0px #000000;
+        }
+        .brutalist-button {
+            border: 3px solid #000000;
+            box-shadow: 4px 4px 0px 0px #000000;
+            transition: all 0.1s ease;
+            background-color: #ffff00; /* Neon Yellow */
+        }
+        .brutalist-button:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 0px 0px 0px 0px #000000;
+        }
+        .brutalist-border-bottom {
+            border-bottom: 4px solid #000000;
+        }
+        .brutalist-border-top {
+            border-top: 4px solid #000000;
+        }
+        .accent-pink { background-color: #ff00ff; }
+        .accent-yellow { background-color: #ffff00; }
+        .accent-cyan { background-color: #00ffff; }
+        .nav-link {
+            position: relative;
+            padding: 2px 4px;
+            transition: background-color 0.15s ease, color 0.15s ease;
+        }
+        .nav-link::before {
+            content: '[';
+            position: absolute;
+            left: -8px;
+            opacity: 0;
+            transform: translateX(6px);
+            transition: opacity 0.15s ease, transform 0.15s ease;
+        }
+        .nav-link::after {
+            content: ']';
+            position: absolute;
+            right: -8px;
+            opacity: 0;
+            transform: translateX(-6px);
+            transition: opacity 0.15s ease, transform 0.15s ease;
+        }
+        .nav-link:hover {
+            background-color: #ffff00;
+            color: #000000;
+        }
+        .nav-link:hover::before {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .nav-link:hover::after {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .hero-linkedin { background-color: #0A66C2; color: #ffffff; }
+        .hero-linkedin:hover { background-color: #0A66C2; color: #ffffff; }
+        .hero-github { background-color: #000000; color: #ffffff; }
+        .hero-github:hover { background-color: #000000; color: #ffffff; }
+
+        section {
+            padding: 4rem 1rem;
+        }
+        @media (min-width: 768px) {
+            section { padding: 6rem 2rem; }
+        }
     </style>
 </head>
-<body>
+<body class="selection:bg-yellow-300">
 
-<!-- Profile Header -->
-<h1>Hi, I'm Sanchit 👋</h1>
-<p class="center">
-  <b>AI Engineer @ Quinnox</b> • <b>NLP + ML Systems</b><br/>
-</p>
+    <!-- Header / Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white brutalist-border-bottom px-6 py-4 flex items-center">
+        <h1 class="text-2xl font-bold tracking-tighter uppercase flex-shrink-0">sv7</h1>
+        <div class="hidden md:flex gap-8 uppercase font-bold text-base absolute left-1/2 -translate-x-1/2">
+            <a href="#about" class="nav-link" data-text="About">About</a>
+            <a href="#skills" class="nav-link" data-text="Skills">Skills</a>
+            <a href="#experience" class="nav-link" data-text="Experience">Experience</a>
+            <a href="#projects" class="nav-link" data-text="Projects">Projects</a>
+        </div>
+        <div class="flex items-center gap-3 ml-auto">
+            <div id="nav-social" class="hidden gap-3 items-center">
+                <a href="https://linkedin.com/in/sanchitv7" class="brutalist-button px-4 py-2 font-bold uppercase text-sm text-white" style="background-color:#0A66C2">LinkedIn</a>
+                <a href="https://github.com/sanchitv7" class="brutalist-button px-4 py-2 font-bold uppercase text-sm text-white" style="background-color:#000000">GitHub</a>
+            </div>
+            <a id="nav-contact" href="#" class="brutalist-button px-4 py-2 font-bold uppercase text-sm" onclick="(function(el){var e=atob('c2FuY2hpdHY3QGdtYWlsLmNvbQ==');el.href='mailto:'+e;el.onclick=null;})(this);return true;">Contact</a>
+        </div>
+    </nav>
 
-<!-- Quick Links -->
-<p class="center">
-  <a href="https://github.com/sanchitv7">GitHub</a> •
-  <a href="http://linkedin.com/in/sanchitv7/">LinkedIn</a> •
-  <a href="mailto:sanchitv7@gmail.com">Email</a>
-</p>
+    <!-- Hero Section -->
+    <section id="about" class="pt-32 pb-12 flex flex-col md:flex-row items-center gap-12 max-w-7xl mx-auto">
+        <div class="md:w-2/3">
+            <div class="inline-block accent-yellow px-4 py-1 brutalist-card mb-6">
+                <span class="font-bold uppercase tracking-widest text-lg">AI Engineer</span>
+            </div>
+            <h1 class="text-6xl md:text-8xl font-black uppercase leading-none mb-8">
+                Sanchit <br/> Verma
+            </h1>
+            <p class="text-xl md:text-2xl font-medium max-w-2xl mb-8 leading-relaxed">
+                Yes, I work in AI. No, I'm not worried about my job.
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="https://linkedin.com/in/sanchitv7" class="brutalist-button hero-linkedin px-4 py-2 font-bold uppercase flex items-center gap-2 text-sm">
+                    LinkedIn
+                </a>
+                <a href="https://github.com/sanchitv7" class="brutalist-button hero-github px-4 py-2 font-bold uppercase flex items-center gap-2 text-sm">
+                    GitHub
+                </a>
+            </div>
+        </div>
+        <div class="md:w-1/3">
+            <div class="brutalist-card w-full aspect-square bg-white overflow-hidden relative">
+                <img src="PhotoRoom_20210831_214327.jpeg" alt="Sanchit Verma" class="w-full h-full object-cover">
+                <div class="absolute bottom-4 right-4 bg-black text-white px-4 py-2 font-bold uppercase -rotate-6">
+                    London, UK
+                </div>
+            </div>
+        </div>
+    </section>
 
-<hr>
+    <!-- Skills Grid -->
+    <section id="skills" class="bg-black text-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-5xl font-black uppercase mb-16 text-center tracking-tighter">Technical Arsenal</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- AI / ML -->
+                <div class="bg-white text-black p-8 brutalist-card">
+                    <h3 class="text-2xl font-black uppercase mb-4 accent-pink inline-block px-2">AI / ML Frameworks</h3>
+                    <ul class="mono text-sm space-y-2 font-bold">
+                        <li>PyTorch, LangChain, LCEL</li>
+                        <li>OpenAI SDK, Gemini SDK</li>
+                        <li>Anthropic SDK, HuggingFace</li>
+                        <li>TensorFlow, Scikit-Learn</li>
+                        <li>CrewAI, Weights & Biases, DeepEval</li>
+                    </ul>
+                </div>
+                <!-- Data Science -->
+                <div class="bg-white text-black p-8 brutalist-card">
+                    <h3 class="text-2xl font-black uppercase mb-4 accent-yellow inline-block px-2">Data Science</h3>
+                    <ul class="mono text-sm space-y-2 font-bold">
+                        <li>Pandas, NumPy</li>
+                        <li>Information Extraction</li>
+                        <li>Regulatory Data Parsing</li>
+                    </ul>
+                </div>
+                <!-- Languages -->
+                <div class="bg-white text-black p-8 brutalist-card">
+                    <h3 class="text-2xl font-black uppercase mb-4 accent-cyan inline-block px-2">Languages</h3>
+                    <ul class="mono text-sm space-y-2 font-bold">
+                        <li>Python (Proficient)</li>
+                        <li>Java, SQL</li>
+                        <li>C / C++</li>
+                    </ul>
+                </div>
+                <!-- AI-Native Dev -->
+                <div class="bg-white text-black p-8 brutalist-card lg:col-span-2">
+                    <h3 class="text-2xl font-black uppercase mb-4 bg-green-400 inline-block px-2">AI-Native Development</h3>
+                    <p class="font-bold mb-4">Internal advocate and standard-setter for AI-aided engineering.</p>
+                    <ul class="mono text-sm grid grid-cols-2 gap-2 font-bold">
+                        <li>• Claude Code</li>
+                        <li>• Cursor</li>
+                        <li>• Agentic Workflows</li>
+                        <li>• Prompt Versioning</li>
+                    </ul>
+                </div>
+                <!-- Other -->
+                <div class="bg-white text-black p-8 brutalist-card">
+                    <h3 class="text-2xl font-black uppercase mb-4 bg-orange-400 inline-block px-2">Tools & Cloud</h3>
+                    <ul class="mono text-sm space-y-2 font-bold">
+                        <li>GCP, AWS</li>
+                        <li>Git, Docker</li>
+                        <li>Gradio, Scrapy</li>
+                        <li>Arduino, MATLAB</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<h2>About me</h2>
-<ul>
-<li>🔎 Focus: <b>Applied NLP</b>, <b>Computer Vision</b>, <b>LLMs</b>, and <b>ML systems</b></li>
-<li>🛠️ Currently: Building LLM‑powered pipelines for information extraction and summarisation from legal/regulatory publications for financial institutions at Quinnox</li>
-<li>🧩 Previously: <b>Data Scientist @ Elucidata</b> • <b>SWE (Growth) @ Loop Health</b> • <b>SWE @ EY</b> • <b>Intern @ EY</b></li>
-<li>🤝 Open to: Collaborations in <b>NLP/LLMs</b>, <b>ML platforms</b>, and <b>computer vision</b></li>
-</ul>
+    <!-- Experience Timeline -->
+    <section id="experience" class="max-w-7xl mx-auto">
+        <h2 class="text-5xl font-black uppercase mb-16 tracking-tighter">Experience</h2>
+        <!-- line at left:16px (left-4), cards start at left:48px (pl-12), squares at left-4 centered on line -->
+        <div class="relative pl-12 space-y-12">
+            <!-- The single continuous vertical line: 4px wide, centered at left:16px = left:14px -->
+            <div class="absolute bottom-0 bg-black" style="left:14px;width:4px;top:1.5rem"></div>
 
-<h2>Skills</h2>
-<ul>
-<li>🤖 AI/ML: <b>PyTorch</b>, <b>HuggingFace</b>, <b>TensorFlow</b>, <b>scikit‑learn</b>, <b>Weights & Biases</b></li>
-<li>🧮 Data: <b>Pandas</b>, <b>NumPy</b>, <b>SQL</b></li>
-<li>🐍 Languages: <b>Python (proficient)</b>, Java, C/C++</li>
-<li>☁️ Cloud & DevOps: <b>Google Cloud Platform (GCP)</b>, <b>Docker</b>, <b>Git</b></li>
-<li>🧰 Tools: Gradio, MATLAB, Scrapy, Arduino</li>
-</ul>
+            <!-- Qyrus -->
+            <div class="relative">
+                <div class="absolute top-6 w-4 h-4 bg-black z-10" style="left:-40px"></div>
+                <div class="brutalist-card p-6 bg-white">
+                    <div class="flex flex-col md:flex-row justify-between mb-4 gap-2">
+                        <div>
+                            <h3 class="text-2xl font-black uppercase">Forward Deployed Engineer</h3>
+                            <p class="font-bold text-lg">Qyrus (a Quinnox company)</p>
+                        </div>
+                        <div class="mono font-bold bg-black text-white px-3 py-1 self-start">
+                            Dec 2025 – Present
+                        </div>
+                    </div>
+                    <ul class="list-disc list-outside ml-4 space-y-2 font-medium">
+                        <li>Embedded as a power-user of the automated testing platform; identifying adoption blockers, surfacing product gaps, and directly informing the product roadmap through structured usage feedback.</li>
+                    </ul>
+                </div>
+            </div>
 
-<!-- Badges -->
-<p>
-  <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white&style=for-the-badge" alt="Python" />
-  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=white&style=for-the-badge" alt="PyTorch" />
-  <img src="https://img.shields.io/badge/HuggingFace-FFD21E?logo=huggingface&logoColor=black&style=for-the-badge" alt="HuggingFace" />
-  <img src="https://img.shields.io/badge/TensorFlow-FF6F00?logo=tensorflow&logoColor=white&style=for-the-badge" alt="TensorFlow" />
-  <img src="https://img.shields.io/badge/scikit--learn-F7931E?logo=scikitlearn&logoColor=white&style=for-the-badge" alt="scikit-learn" />
-  <img src="https://img.shields.io/badge/GCP-4285F4?logo=googlecloud&logoColor=white&style=for-the-badge" alt="GCP" />
-  <img src="https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white&style=for-the-badge" alt="Docker" />
-  <img src="https://img.shields.io/badge/W%26B-FFBE00?style=for-the-badge" alt="W&B" />
-</p>
+            <!-- Quinnox -->
+            <div class="relative">
+                <div class="absolute top-6 w-4 h-4 bg-black z-10" style="left:-40px"></div>
+                <div class="brutalist-card p-6 bg-white">
+                    <div class="flex flex-col md:flex-row justify-between mb-4 gap-2">
+                        <div>
+                            <h3 class="text-2xl font-black uppercase">AI Engineer</h3>
+                            <p class="font-bold text-lg">Quinnox</p>
+                        </div>
+                        <div class="mono font-bold bg-black text-white px-3 py-1 self-start">
+                            May 2025 – Present
+                        </div>
+                    </div>
+                    <ul class="list-disc list-outside ml-4 space-y-3 font-medium">
+                        <li>One of the founding members of <strong>QUAIL (Quinnox AI Labs)</strong>; drove full team adoption of agentic development tools across a 10-person engineering team, now tracking time saved as a KPI.</li>
+                        <li>Shipped a production LLM-based information extraction system into a live compliance platform used by banks and regulators — built with Python, LangChain, and FastAPI, with DeepEval observability and SME-validated evaluation cycles.</li>
+                        <li>Prototyping an <strong>AI-native PM platform</strong> (under Executive VP) that connects OKRs, GitHub, and Jira; built the first working prototype solo and now iterating with external client feedback.</li>
+                        <li>Delivered a POC for agentic customer onboarding — demonstrated live to a bank client how tool-calling agents can autonomously perform due diligence and background checks, replacing a fully manual process.</li>
+                    </ul>
+                </div>
+            </div>
 
-<h2>Highlights</h2>
-<ul>
-<li>⚡ Built a data validation pipeline processing <b>1.2M+ biomedical datasets</b>, achieving <b>32× speedup (8h → 15m)</b> with <b>throughput, error, and data‑quality monitoring</b></li>
-<li>🧾 Automated insurance <b>claims analysis</b> using <b>Python + Streamlit</b>, improving operational workflows</li>
-<li>🔗 Engineered production <b>Python ETL</b> (APIs + SQL) for <b>license compliance and risk assessment</b> used by <b>Fortune 500</b> clients</li>
-<li>🛰️ Trained <b>6 production‑ready object detection models</b> for safety and surveillance use cases</li>
-<li>🎓 M.Sc. thesis: <b>Multi‑task TimeSformer</b> for video artefact detection with <b>AUC up to 0.81</b></li>
-</ul>
+            <!-- Loop Health -->
+            <div class="relative">
+                <div class="absolute top-6 w-4 h-4 bg-black z-10" style="left:-40px"></div>
+                <div class="brutalist-card p-6 bg-white">
+                    <div class="flex flex-col md:flex-row justify-between mb-4 gap-2">
+                        <div>
+                            <h3 class="text-2xl font-black uppercase">Software Engineer — Growth</h3>
+                            <p class="font-bold text-lg">Loop Health</p>
+                        </div>
+                        <div class="mono font-bold bg-black text-white px-3 py-1 self-start">
+                            Jun 2023 – Aug 2023
+                        </div>
+                    </div>
+                    <ul class="list-disc list-outside ml-4 space-y-2 font-medium">
+                        <li>Automated manual claims processing workflow handling multi-format insurance submissions across 5+ providers, codifying domain expert business rules to eliminate 15+ hours/week of specialist review time.</li>
+                    </ul>
+                </div>
+            </div>
 
-<h2>Featured projects</h2>
-<ul>
-<li>🎥 <b>Video Artefact Detection (Multi‑Task Learning, M.Sc. Thesis)</b><br/>
-  TimeSformer‑based multi‑task model for streaming‑quality assessment.<br/>
-  <b>Tech:</b> PyTorch, HuggingFace, Weights & Biases</li>
-<li>🩺 <b>Abbreviation + Long‑Form Detection on PLOD (Biomedical NLP)</b><br/>
-  Sequence classifier for medical text abbreviations; architecture and preprocessing comparisons.<br/>
-  <b>Tech:</b> PyTorch, HuggingFace</li>
-<li>🍄 <b>Real‑World Knife Classification</b><br/>
-  Fine‑grained classification with EfficientNetB0/ResNet50 and rich augmentations.<br/>
-  <b>Tech:</b> PyTorch, Timm, TensorBoard</li>
-<li>🔎 <b>Image Retrieval for Visual Similarity Search</b><br/>
-  Classical CV (SIFT, histograms) + similarity metrics on MSRC‑v2.<br/>
-  <b>Tech:</b> MATLAB</li>
-<li>🧪 <b>Data Validation at Scale (Elucidata)</b><br/>
-  Reusable Python library + pipeline to standardize validation across teams; schema/ontology checks.<br/>
-  <b>Tech:</b> Python, Pandas, GCP, Docker</li>
-</ul>
+            <!-- Elucidata -->
+            <div class="relative">
+                <div class="absolute top-6 w-4 h-4 bg-black z-10" style="left:-40px"></div>
+                <div class="brutalist-card p-6 bg-white">
+                    <div class="flex flex-col md:flex-row justify-between mb-4 gap-2">
+                        <div>
+                            <h3 class="text-2xl font-black uppercase">Data Scientist</h3>
+                            <p class="font-bold text-lg">Elucidata</p>
+                        </div>
+                        <div class="mono font-bold bg-black text-white px-3 py-1 self-start">
+                            Jan 2022 – Jun 2023
+                        </div>
+                    </div>
+                    <ul class="list-disc list-outside ml-4 space-y-3 font-medium">
+                        <li>Built and deployed a data validation pipeline across 1.2M biomedical datasets (GEO, TCGA, PubMed, DepMap), achieving a <strong>32x performance improvement</strong> — from 8h to 15min.</li>
+                        <li>Developed a reusable Python validation library adopted company-wide, reducing duplicate code and standardising data quality across all engineering teams.</li>
+                    </ul>
+                </div>
+            </div>
 
-<h2>Experience</h2>
-<ul>
-<li><b>Quinnox — AI Engineer</b> <i>(May 2025–Present)</i>
-  <ul>
-  <li>Enhanced <b>NLP systems</b> for an AI‑driven <b>compliance platform</b> for <b>financial institutions</b></li>
-  <li>Designed <b>LLM workflows for information extraction and summarisation from legal/regulatory publications</b>, producing structured outputs for downstream compliance and review</li>
-  </ul>
-</li>
-<li><b>Loop Health — Software Engineer (Growth)</b> <i>(Jun 2023–Aug 2023)</i>
-  <ul>
-  <li>Built a <b>claims analysis app</b> with <b>Python + Streamlit</b> to automate insurance processing</li>
-  <li>Led <b>cross‑functional</b> requirements with founders and non‑technical teams</li>
-  </ul>
-</li>
-<li><b>Elucidata — Data Scientist</b> <i>(Jan 2022–Jun 2023)</i>
-  <ul>
-  <li>Architected a validation pipeline for <b>1.2M+ datasets</b> with <b>32× performance optimization</b></li>
-  <li>Created a <b>company‑wide Python validation library</b> adopted across teams</li>
-  <li>Shipped monitoring for <b>throughput, errors, schema/ontology quality</b></li>
-  </ul>
-</li>
-<li><b>EY — Software Engineer</b> <i>(Dec 2019–Jul 2021)</i>
-  <ul>
-  <li>Built <b>mission‑critical Python ETL</b> in EY's SAM/EY ATOM, integrating <b>APIs + SQL DBs</b> for compliance and risk assessment (<b>Fortune 500</b> clients)</li>
-  <li>Automated <b>regulatory update monitoring</b> with <b>Scrapy</b>; proposed <b>NLG</b> for chart narration and <b>fuzzy address matching</b></li>
-  </ul>
-</li>
-<li><b>EY — Intern</b> <i>(Jan 2019–Apr 2019; May 2018–Jul 2018)</i>
-  <ul>
-  <li>Developed <b>predictive maintenance</b> models (scikit‑learn) demonstrating fleet cost savings</li>
-  <li>Built <b>TensorFlow + GCP</b> pipeline, <b>reducing model development time by 85%</b></li>
-  <li>Trained <b>6 production‑ready object detection models</b> for safety and surveillance</li>
-  </ul>
-</li>
-</ul>
+            <!-- EY -->
+            <div class="relative">
+                <div class="absolute top-6 w-4 h-4 bg-black z-10" style="left:-40px"></div>
+                <div class="brutalist-card p-6 bg-white">
+                    <div class="flex flex-col md:flex-row justify-between mb-4 gap-2">
+                        <div>
+                            <h3 class="text-2xl font-black uppercase">Software Engineer</h3>
+                            <p class="font-bold text-lg">EY</p>
+                        </div>
+                        <div class="mono font-bold bg-black text-white px-3 py-1 self-start">
+                            Dec 2019 – Jul 2021
+                        </div>
+                    </div>
+                    <ul class="list-disc list-outside ml-4 space-y-3 font-medium">
+                        <li>Engineered Python ETL modules for EY ATOM, automating software license compliance and risk assessment for Fortune 500 clients (ADP, IBM).</li>
+                        <li>Built Scrapy crawlers tracking regulatory updates across 15 jurisdictions — reducing 20h/week of manual compliance monitoring to zero.</li>
+                    </ul>
+                </div>
+            </div>
 
-<h2>Education</h2>
-<ul>
-<li>🎓 <b>M.Sc., Artificial Intelligence</b> — University of Surrey, United Kingdom (2024)</li>
-<li>🎓 <b>B.Tech., Computer Science & Engineering</b> — Shiv Nadar University, India</li>
-</ul>
+        </div>
+    </section>
 
-<h2>Certifications</h2>
-<ul>
-<li>🧠 <b>Generative AI with Large Language Models</b> — Coursera / DeepLearning.AI / AWS (Jan 2025)</li>
-<li>📘 <b>Machine Learning Basics Nanodegree</b> — Udacity (Dec 2021)</li>
-</ul>
+    <!-- Projects Section -->
+    <section id="projects" class="bg-yellow-400">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-5xl font-black uppercase mb-16 tracking-tighter">Selected Works</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Make It Make Sense -->
+                <div class="brutalist-card bg-white p-8 md:col-span-2">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-black flex items-center justify-center text-white font-bold text-2xl">01</div>
+                        <h3 class="text-3xl font-black uppercase">Make It Make Sense</h3>
+                    </div>
+                    <p class="font-bold text-lg mb-4 italic">Real-Time AI Fact-Checker</p>
+                    <p class="mb-6 font-medium">Listens to live audio via microphone, detects factual claims in real time using the Gemini Live API, then instantly verifies each claim against trusted sources. Verdicts — TRUE, FALSE, MISLEADING, or UNVERIFIED — are forced to UNVERIFIED without a citation from a trusted domain (Reuters, BBC, .gov). Sessions and claims are persisted to Supabase.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="mono text-xs font-bold border-2 border-black px-2 py-1">Next.js</span>
+                        <span class="mono text-xs font-bold border-2 border-black px-2 py-1">FastAPI</span>
+                        <span class="mono text-xs font-bold border-2 border-black px-2 py-1">Gemini Live API</span>
+                        <span class="mono text-xs font-bold border-2 border-black px-2 py-1">Supabase</span>
+                        <span class="mono text-xs font-bold border-2 border-black px-2 py-1">TypeScript</span>
+                    </div>
+                    <a href="https://make-it-make-sense.vercel.app/" class="brutalist-button px-6 py-2 font-black uppercase inline-block">Visit <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="inline-block w-4 h-4 mb-0.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+                    <a href="https://github.com/sanchitv7/make-it-make-sense" class="brutalist-button px-6 py-2 font-black uppercase inline-block bg-white">View on GitHub</a>
+                </div>
 
-<h2>Get in touch</h2>
-<ul>
-<li>🌐 GitHub: <a href="https://github.com/sanchitv7">https://github.com/sanchitv7</a></li>
-<li>💼 LinkedIn: <a href="http://linkedin.com/in/sanchitv7/">http://linkedin.com/in/sanchitv7/</a></li>
-<li>✉️ Email: <a href="mailto:sanchitv7@gmail.com">sanchitv7@gmail.com</a></li>
-</ul>
+                <!-- Job Goblin -->
+                <div class="brutalist-card bg-white p-8">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-black flex items-center justify-center text-white font-bold text-2xl">02</div>
+                        <h3 class="text-3xl font-black uppercase">Job Goblin</h3>
+                    </div>
+                    <p class="font-bold text-lg mb-4 italic">AI Recruiting Assistant</p>
+                    <p class="mb-6 font-medium">Four-agent sequential pipeline (sourcing → matching → pitch writing → outreach) with a swipe-style UI and SSE streaming for real-time pipeline progress — built in ~2 hours without heavyweight frameworks.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="mono text-xs font-bold border-2 border-black px-2 py-1">Python</span>
+                        <span class="mono text-xs font-bold border-2 border-black px-2 py-1">FastAPI</span>
+                        <span class="mono text-xs font-bold border-2 border-black px-2 py-1">Gemini SDK</span>
+                        <span class="mono text-xs font-bold border-2 border-black px-2 py-1">React</span>
+                        <span class="mono text-xs font-bold border-2 border-black px-2 py-1">SQLite</span>
+                        <span class="mono text-xs font-bold border-2 border-black px-2 py-1">Vite</span>
+                        <span class="mono text-xs font-bold border-2 border-black px-2 py-1">Framer Motion</span>
+                    </div>
+                    <a href="https://job-goblin-seven.vercel.app" class="brutalist-button px-6 py-2 font-black uppercase inline-block">Visit <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="inline-block w-4 h-4 mb-0.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+                    <a href="https://github.com/sanchitv7/job-goblin" class="brutalist-button px-6 py-2 font-black uppercase inline-block bg-white">View on GitHub</a>
+                </div>
 
-<hr>
+                <!-- Thesis Project -->
+                <div class="brutalist-card bg-white p-8">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-black flex items-center justify-center text-white font-bold text-2xl">03</div>
+                        <h3 class="text-3xl font-black uppercase">Video Artefact Detection</h3>
+                    </div>
+                    <p class="font-bold text-lg mb-4 italic">M.Sc. Thesis Project</p>
+                    <p class="mb-6 font-medium">TimeSformer-based multi-task learning model for real-time anomaly detection in streaming video content, achieving AUC scores up to 0.81 through optimised temporal modeling and model architecture experimentation.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="mono text-xs font-bold border-2 border-black px-2 py-1">PyTorch</span>
+                        <span class="mono text-xs font-bold border-2 border-black px-2 py-1">HuggingFace</span>
+                        <span class="mono text-xs font-bold border-2 border-black px-2 py-1">W&B</span>
+                        <span class="mono text-xs font-bold border-2 border-black px-2 py-1">TimeSformer</span>
+                    </div>
+                    <a href="https://github.com/sanchitv7/mtl-video-classification" class="brutalist-button px-6 py-2 font-black uppercase inline-block">View on GitHub</a>
+                </div>
 
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certs -->
+    <section class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+                <h2 class="text-4xl font-black uppercase mb-8 tracking-tighter">Education</h2>
+                <div class="space-y-6">
+                    <div class="brutalist-card p-6">
+                        <h4 class="font-black uppercase text-xl">M.Sc. Artificial Intelligence</h4>
+                        <p class="font-bold">University of Surrey, UK</p>
+                    </div>
+                    <div class="brutalist-card p-6">
+                        <h4 class="font-black uppercase text-xl">B.Tech. Computer Science</h4>
+                        <p class="font-bold">Shiv Nadar University, India</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2 class="text-4xl font-black uppercase mb-8 tracking-tighter">Certifications</h2>
+                <div class="brutalist-card p-6 bg-pink-500 text-white">
+                    <h4 class="font-black uppercase text-xl">Generative AI with LLMs</h4>
+                    <p class="font-bold">Coursera, DeepLearning.AI & AWS</p>
+                    <p class="mono text-sm mt-2">Jan 2025</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12 px-6 text-center brutalist-border-top">
+        <h2 class="text-3xl font-black uppercase mb-6 tracking-tighter">on a quest to know more, do more and be more.</h2>
+<p class="text-xs mono opacity-50 uppercase">© 2026 Sanchit Verma. You're absolutely right, and I apologize for the confusion.</p>
+    </footer>
+
+<script>
+    // Show/hide nav social links based on hero visibility
+    const heroButtons = document.querySelector('#about .flex.flex-wrap.gap-4');
+    const navSocial = document.getElementById('nav-social');
+    const observer = new IntersectionObserver(([entry]) => {
+        if (entry.isIntersecting) {
+            navSocial.classList.remove('flex');
+            navSocial.classList.add('hidden');
+        } else {
+            navSocial.classList.remove('hidden');
+            navSocial.classList.add('flex');
+        }
+    }, { threshold: 0 });
+    if (heroButtons) observer.observe(heroButtons);
+</script>
+
+<script>
+</script>
+
+<script>
+    document.addEventListener('click', function(e) {
+        if (e.target.closest('a, button')) return;
+        const el = document.createElement('span');
+        el.textContent = 'hehe';
+        el.style.cssText = `
+            position: fixed;
+            left: ${e.clientX + 12}px;
+            top: ${e.clientY - 10}px;
+            font-family: 'Space Mono', monospace;
+            font-weight: bold;
+            font-size: 0.85rem;
+            background: #ffff00;
+            border: 2px solid #000;
+            padding: 2px 6px;
+            pointer-events: none;
+            z-index: 9999;
+            animation: hehe-pop 0.8s ease forwards;
+        `;
+        document.body.appendChild(el);
+        setTimeout(() => el.remove(), 800);
+    });
+</script>
+
+<style>
+    @keyframes hehe-pop {
+        0%   { opacity: 1; transform: translateY(0) scale(1); }
+        60%  { opacity: 1; transform: translateY(-12px) scale(1.1); }
+        100% { opacity: 0; transform: translateY(-24px) scale(0.9); }
+    }
+</style>
+
+<script>
+    document.querySelectorAll('a[href]').forEach(a => {
+        if (!a.href.startsWith('mailto:') && !a.href.startsWith('#')) {
+            a.setAttribute('target', '_blank');
+            a.setAttribute('rel', 'noopener noreferrer');
+        }
+    });
+</script>
 </body>
 </html>
