@@ -463,7 +463,8 @@
 
 <script>
     document.querySelectorAll('a[href]').forEach(a => {
-        if (!a.href.startsWith('mailto:') && !a.href.startsWith('#')) {
+        const href = a.getAttribute('href');
+        if (!href.startsWith('mailto:') && !href.startsWith('#')) {
             a.setAttribute('target', '_blank');
             a.setAttribute('rel', 'noopener noreferrer');
         }
