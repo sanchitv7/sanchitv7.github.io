@@ -81,6 +81,7 @@
         .hero-linkedin:hover { background-color: #0A66C2; color: #ffffff; }
         .hero-github { background-color: #000000; color: #ffffff; }
         .hero-github:hover { background-color: #000000; color: #ffffff; }
+        #nav-social .hero-github { border-color: #ffffff; }
 
         section {
             padding: 4rem 1rem;
@@ -88,23 +89,33 @@
         @media (min-width: 768px) {
             section { padding: 6rem 2rem; }
         }
+        #about {
+            background-image: radial-gradient(circle, #00000015 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        nav .brutalist-button {
+            box-shadow: 4px 4px 0px 0px #aaaaaa;
+        }
+        nav .brutalist-button:hover {
+            box-shadow: 0px 0px 0px 0px #aaaaaa;
+        }
     </style>
 </head>
 <body class="selection:bg-yellow-300">
 
     <!-- Header / Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-white brutalist-border-bottom px-6 py-4 flex items-center">
-        <h1 class="text-2xl font-bold tracking-tighter uppercase flex-shrink-0">sv7</h1>
+    <nav class="fixed top-0 w-full z-50 bg-black brutalist-border-bottom px-6 py-4 flex items-center">
+        <h1 class="text-2xl font-bold tracking-tighter uppercase flex-shrink-0 text-white">sv7</h1>
         <div class="hidden md:flex gap-8 uppercase font-bold text-base absolute left-1/2 -translate-x-1/2">
-            <a href="#about" class="nav-link" data-text="About">About</a>
-            <a href="#skills" class="nav-link" data-text="Skills">Skills</a>
-            <a href="#experience" class="nav-link" data-text="Experience">Experience</a>
-            <a href="#projects" class="nav-link" data-text="Projects">Projects</a>
+            <a href="#about" class="nav-link text-white" data-text="About">About</a>
+            <a href="#skills" class="nav-link text-white" data-text="Skills">Skills</a>
+            <a href="#experience" class="nav-link text-white" data-text="Experience">Experience</a>
+            <a href="#projects" class="nav-link text-white" data-text="Projects">Projects</a>
         </div>
         <div class="flex items-center gap-3 ml-auto">
             <div id="nav-social" class="hidden gap-3 items-center">
-                <a href="https://linkedin.com/in/sanchitv7" class="brutalist-button px-4 py-2 font-bold uppercase text-sm text-white" style="background-color:#0A66C2">LinkedIn</a>
-                <a href="https://github.com/sanchitv7" class="brutalist-button px-4 py-2 font-bold uppercase text-sm text-white" style="background-color:#000000">GitHub</a>
+                <a href="https://linkedin.com/in/sanchitv7" class="brutalist-button px-4 py-2 font-bold uppercase text-sm text-white" style="background-color:#0A66C2;">LinkedIn</a>
+                <a href="https://github.com/sanchitv7" class="brutalist-button px-4 py-2 font-bold uppercase text-sm" style="background-color:#ffffff; color:#000000;">GitHub</a>
             </div>
             <a id="nav-contact" href="#" class="brutalist-button px-4 py-2 font-bold uppercase text-sm" onclick="(function(el){var e=atob('c2FuY2hpdHY3QGdtYWlsLmNvbQ==');el.href='mailto:'+e;el.onclick=null;})(this);return true;">Contact</a>
         </div>
@@ -116,7 +127,7 @@
             <div class="inline-block accent-yellow px-4 py-1 brutalist-card mb-6">
                 <span class="font-bold uppercase tracking-widest text-lg">AI Engineer</span>
             </div>
-            <h1 class="text-6xl md:text-8xl font-black uppercase leading-none mb-8">
+            <h1 class="text-7xl md:text-9xl font-black uppercase leading-none mb-8">
                 Sanchit <br/> Verma
             </h1>
             <p class="text-xl md:text-2xl font-medium max-w-2xl mb-8 leading-relaxed">
@@ -159,7 +170,7 @@
                 </div>
                 <!-- Data Science -->
                 <div class="bg-white text-black p-8 brutalist-card">
-                    <h3 class="text-2xl font-black uppercase mb-4 accent-yellow inline-block px-2">Data Science</h3>
+                    <h3 class="text-2xl font-black uppercase mb-4 accent-cyan inline-block px-2">Data Science</h3>
                     <ul class="mono text-sm space-y-2 font-bold">
                         <li>Pandas, NumPy</li>
                         <li>Information Extraction</li>
@@ -168,7 +179,7 @@
                 </div>
                 <!-- Languages -->
                 <div class="bg-white text-black p-8 brutalist-card">
-                    <h3 class="text-2xl font-black uppercase mb-4 accent-cyan inline-block px-2">Languages</h3>
+                    <h3 class="text-2xl font-black uppercase mb-4 accent-yellow inline-block px-2">Languages</h3>
                     <ul class="mono text-sm space-y-2 font-bold">
                         <li>Python (Proficient)</li>
                         <li>Java, SQL</li>
@@ -237,7 +248,7 @@
                             <p class="font-bold text-lg">Quinnox</p>
                         </div>
                         <div class="mono font-bold bg-black text-white px-3 py-1 self-start">
-                            May 2025 – Present
+                            May 2025 – Mar 2026
                         </div>
                     </div>
                     <ul class="list-disc list-outside ml-4 space-y-3 font-medium">
@@ -312,7 +323,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="bg-yellow-400">
+    <section id="projects" style="background: #f0e000; background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.03) 10px, rgba(0,0,0,0.03) 11px);">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-5xl font-black uppercase mb-16 tracking-tighter">Selected Works</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -426,8 +437,6 @@
     if (heroButtons) observer.observe(heroButtons);
 </script>
 
-<script>
-</script>
 
 <script>
     document.addEventListener('click', function(e) {
