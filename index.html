@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sanchit Verma | Portfolio</title>
-    <meta name="description" content="Sanchit Verma — AI Engineer building agentic systems, production LLMs, and high-performance data pipelines. Based in London, UK.">
+    <meta name="description" content="Sanchit Verma, AI Engineer at Resolutiion. Explore my work on commercial reasoning, production LLMs, and evaluation.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <style>
@@ -99,6 +99,23 @@
         nav .brutalist-button:hover {
             box-shadow: 0px 0px 0px 0px #aaaaaa;
         }
+        .company-link {
+            display: inline-flex;
+            align-items: center;
+            gap: .75rem;
+            min-height: 44px;
+            margin-top: .125rem;
+            text-decoration: none;
+        }
+        .company-link:hover span,
+        .company-link:focus-visible span {
+            text-decoration: underline;
+            text-underline-offset: .2em;
+        }
+        .company-link:focus-visible {
+            outline: 2px solid #0a66c2;
+            outline-offset: 3px;
+        }
     </style>
 </head>
 <body class="selection:bg-yellow-300">
@@ -131,7 +148,7 @@
                 Sanchit <br/> Verma
             </h1>
             <p class="text-xl md:text-2xl font-medium max-w-2xl mb-8 leading-relaxed">
-                Yes, I work in AI. No, I'm not worried about my job.
+                Yes, I work in AI.<br>No, I'm not worried about my job.
             </p>
             <div class="flex flex-wrap gap-4">
                 <a href="https://linkedin.com/in/sanchitv7" class="brutalist-button hero-linkedin px-4 py-2 font-bold uppercase flex items-center gap-2 text-sm">
@@ -219,6 +236,25 @@
             <!-- The single continuous vertical line: 4px wide, centered at left:16px = left:14px -->
             <div class="absolute bottom-0 bg-black" style="left:14px;width:4px;top:1.5rem"></div>
 
+            <!-- Resolutiion -->
+            <div class="relative">
+                <div class="absolute top-6 w-4 h-4 bg-black z-10" style="left:-40px"></div>
+                <div class="brutalist-card p-6 bg-white">
+                    <div class="flex flex-col md:flex-row justify-between mb-4 gap-2">
+                        <div>
+                            <h3 class="text-2xl font-black uppercase">AI Engineer</h3>
+                            <a class="company-link" href="https://www.resolutiion.com/">
+                                <span class="font-bold text-lg">Resolutiion</span>
+                            </a>
+                        </div>
+                        <div class="mono font-bold bg-black text-white px-3 py-1 self-start">
+                            Aug 2026 – Present
+                        </div>
+                    </div>
+                    <p class="font-medium">I build AI systems that analyse contracts alongside commercial context and stakeholder priorities. The systems identify gaps in agreements, suggest improvements to contract terms, and develop strategies tailored to negotiations and commercial disputes.</p>
+                </div>
+            </div>
+
             <!-- Qyrus -->
             <div class="relative">
                 <div class="absolute top-6 w-4 h-4 bg-black z-10" style="left:-40px"></div>
@@ -226,10 +262,12 @@
                     <div class="flex flex-col md:flex-row justify-between mb-4 gap-2">
                         <div>
                             <h3 class="text-2xl font-black uppercase">Forward Deployed Engineer</h3>
-                            <p class="font-bold text-lg">Qyrus</p>
+                            <a class="company-link" href="https://www.qyrus.com/">
+                                <span class="font-bold text-lg">Qyrus</span>
+                            </a>
                         </div>
                         <div class="mono font-bold bg-black text-white px-3 py-1 self-start">
-                            Dec 2025 – Present
+                            Dec 2025 – Jul 2026
                         </div>
                     </div>
                     <ul class="list-disc list-outside ml-4 space-y-2 font-medium">
@@ -245,7 +283,9 @@
                     <div class="flex flex-col md:flex-row justify-between mb-4 gap-2">
                         <div>
                             <h3 class="text-2xl font-black uppercase">AI Engineer</h3>
-                            <p class="font-bold text-lg">Quinnox</p>
+                            <a class="company-link" href="https://www.quinnox.com/">
+                                <span class="font-bold text-lg">Quinnox</span>
+                            </a>
                         </div>
                         <div class="mono font-bold bg-black text-white px-3 py-1 self-start">
                             May 2025 – Mar 2026
@@ -267,7 +307,9 @@
                     <div class="flex flex-col md:flex-row justify-between mb-4 gap-2">
                         <div>
                             <h3 class="text-2xl font-black uppercase">Software Engineer — Growth</h3>
-                            <p class="font-bold text-lg">Loop Health</p>
+                            <a class="company-link" href="https://www.loophealth.com/">
+                                <span class="font-bold text-lg">Loop Health</span>
+                            </a>
                         </div>
                         <div class="mono font-bold bg-black text-white px-3 py-1 self-start">
                             Jun 2023 – Aug 2023
@@ -286,7 +328,9 @@
                     <div class="flex flex-col md:flex-row justify-between mb-4 gap-2">
                         <div>
                             <h3 class="text-2xl font-black uppercase">Data Scientist</h3>
-                            <p class="font-bold text-lg">Elucidata</p>
+                            <a class="company-link" href="https://www.elucidata.io/">
+                                <span class="font-bold text-lg">Elucidata</span>
+                            </a>
                         </div>
                         <div class="mono font-bold bg-black text-white px-3 py-1 self-start">
                             Jan 2022 – Jun 2023
@@ -306,7 +350,9 @@
                     <div class="flex flex-col md:flex-row justify-between mb-4 gap-2">
                         <div>
                             <h3 class="text-2xl font-black uppercase">Software Engineer</h3>
-                            <p class="font-bold text-lg">EY</p>
+                            <a class="company-link" href="https://www.ey.com/en_uk">
+                                <span class="font-bold text-lg">EY</span>
+                            </a>
                         </div>
                         <div class="mono font-bold bg-black text-white px-3 py-1 self-start">
                             Dec 2019 – Jul 2021
